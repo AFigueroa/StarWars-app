@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { RouterModule } from '@angular/router';
 import {appRoutes} from './app.routes'
@@ -21,7 +22,9 @@ import {PeopleDetailsComponent} from './public/people/details/people.details.com
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
+    JsonpModule
   ],
   providers: [],
   bootstrap: [

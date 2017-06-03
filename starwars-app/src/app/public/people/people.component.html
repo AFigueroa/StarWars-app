@@ -1,1 +1,6 @@
-<h1>List</h1>
+<h3>Star Wars - People</h3>
+<ul *ngIf="people">
+  <li *ngFor="let person of people.results">{{person.name}}</li>
+</ul>
+
+<button (click)="logPeople()">Log</button>

@@ -1,0 +1,10 @@
+export class People {
+    constructor(
+        public count: number,
+        public next: string,
+        public previous: string,
+        public results: Array
+         //,public films: list
+    ) { }
+    
+}
