@@ -1,1 +1,31 @@
-<h1>Details</h1>
+<h3>Details</h3>
+<div class="grid" *ngIf="person">
+    <div class="row">
+        <span class="cell label">Person:</span>
+        <span class="cell">{{person.name}}</span>
+    </div>
+    <div class="row">
+        <span class="cell label">Eye Color:</span>
+        <span class="cell">{{person.eye_color}}</span>
+    </div>
+    <div class="row">
+        <span class="cell label">Hair Color:</span>
+        <span class="cell">{{person.hair_color}}</span>
+    </div>
+    <div class="row">
+        <span class="cell label">Height:</span>
+        <span class="cell">{{person.height}}</span>
+    </div>
+    <div class="row">
+        <span class="cell label">Gender:</span>
+        <span class="cell">{{person.gender}}</span>
+    </div>
+    <div class="row">
+        <span class="cell label">Films:</span>
+        <ul class="cell">
+            <li *ngFor="let film of person.films">
+                {{film}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -21,12 +21,11 @@ export class PeopleComponent {
     constructor (private peopleService: PeopleService) {}
     
     ngOnInit() { this.getPeople(); }
-    logPeople(){console.log(this.people)}
+
     getPeople() {
-        console.log('Getting people...');
-    this.peopleService.getPeople()
-                   .subscribe(
-                     people => this.people = people,
-                     error =>  this.errorMessage = <any>error);
-  }
+        this.peopleService.getPeople().subscribe(
+             people => this.people = people,
+             error =>  this.errorMessage = <any>error
+        );
+    }
 }

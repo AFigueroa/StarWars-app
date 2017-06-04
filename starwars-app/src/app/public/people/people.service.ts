@@ -21,6 +21,12 @@ export class PeopleService {
                     .catch(this.handleError);
     }
     
+    getPerson(personId): Observable<Person[]> {
+        return this.http.get(this.peopleUrl + personId)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+    }
+    
     private extractData(res: Response) {
         let body = res.json();
         console.log(body)

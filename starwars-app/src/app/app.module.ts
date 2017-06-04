@@ -12,6 +12,8 @@ import {HomeComponent} from './public/home/home.component';
 import {PeopleComponent} from './public/people/people.component';
 import {PeopleDetailsComponent} from './public/people/details/people.details.component';
 
+import {PeopleService} from './public/people/people.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import {PeopleDetailsComponent} from './public/people/details/people.details.com
     HttpModule,
     JsonpModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [
       AppComponent
   ]
