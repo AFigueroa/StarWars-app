@@ -1,6 +1,23 @@
 <h3>Star Wars - People</h3>
-<ul *ngIf="people">
-  <li *ngFor="let person of people.results">{{person.name}}</li>
-</ul>
-
-<button (click)="logPeople()">Log</button>
+<div *ngIf="people" class="table">
+    
+    <!--  Table Head  -->
+    <div class="table-row table-header">
+        <div class="table-detail large"></div>
+        <div class="table-detail small">#</div>
+        <div class="table-detail large">Name</div>
+        <div class="table-detail small">Gender</div>
+        <div class="table-detail small">Films</div>
+    </div>
+    
+    <!--  Data Rows  -->
+    <div *ngFor="let person of people.results; let index=index; let odd=odd; let even=even;" class="table-row" [ngClass]="{ odd: odd, even: even }">
+        <div class="table-detail large"><a [routerLink]="['/people/' + person.url.split('/')[5]]">View More Details</a></div>
+        <div class="table-detail small">
+            {{person.url.split('/')[5]}}
+        </div>
+        <div class="table-detail large">{{person.name}}</div>
+        <div class="table-detail small">{{person.gender}}</div>
+        <div class="table-detail small">{{person.films.length}}</div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.table{
+    width:100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.table-row{
+    width:100%;
+    clear:both;
+    height: 45px;
+}
+
+.table-header{
+    font-weight: 800;
+}
+
+.table-detail{
+    padding-left: 5px;
+    float:left;
+    height: 100%;
+    line-height: 2.8;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    border-color: rgb(227, 220, 220);
+}
+
+.table-row.even .table-detail{
+    background-color: rgb(239, 239, 239);
+}
+
+.small{
+    width:calc(10% - 7px);
+}
+
+.medium{
+    width:calc(20% - 7px);
+}
+
+.large{
+    width: calc(35% - 7px);
+}
