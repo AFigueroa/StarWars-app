@@ -22,10 +22,10 @@
     </div>
     <div class="row">
         <span class="cell label">Films:</span>
-        <ul class="cell">
-            <li *ngFor="let film of person.films">
+        <div class="cell">
+            <span *ngFor="let film of person.films">
                 {{film}}
-            </li>
-        </ul>
+            </span>
+        </div>
     </div>
 </div>

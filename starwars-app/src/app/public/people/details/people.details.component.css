@@ -1,0 +1,17 @@
+.grid{
+    width:100%;
+    max-width: 400px;
+    margin-left:20px;
+}
+
+.cell{
+    width: 45%;
+    padding:2.5%;
+    display: inline-block;
+    margin: 0;
+    float:left;
+}
+
+.label{
+    font-weight: 800;
+}
