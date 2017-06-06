@@ -40,7 +40,9 @@ export class PeopleDetailsComponent {
         this.getPerson(this.id);
     }
 
+    //@getPerson
     getPerson(personId) {
+        // Makes a GET request to retrieve person details by person id.
         this.peopleService.getPerson(personId).subscribe(
              person => this.person = person,
              error =>  this.errorMessage = <any>error

@@ -15,24 +15,31 @@ export class PeopleService {
 
     constructor (private http: Http) {}
 
+    //@getPeople
+    // Retrieve people list data
     getPeople(): Observable<People[]> {
         return this.http.get(this.peopleUrl)
                     .map(this.extractData)
                     .catch(this.handleError);
     }
     
+    //@getPerson
+    // Retrieve character data by id
     getPerson(personId): Observable<Person[]> {
         return this.http.get(this.peopleUrl + personId)
                     .map(this.extractData)
                     .catch(this.handleError);
     }
     
+    //@extractData
+    // Converts the response object into json
     private extractData(res: Response) {
         let body = res.json();
-        console.log(body)
         return body || { };
     }
 
+    //@handleError
+    // Error catcher. Logs error in console and returns a Error object instead of the Http package
     private handleError (error: Response | any) {
         let errMsg: string;
         if (error instanceof Response) {

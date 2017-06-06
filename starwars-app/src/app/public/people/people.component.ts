@@ -22,7 +22,9 @@ export class PeopleComponent {
     
     ngOnInit() { this.getPeople(); }
 
+    //@getPeople
     getPeople() {
+        // Makes a GET request to get the first page of the character list
         this.peopleService.getPeople().subscribe(
              people => this.people = people,
              error =>  this.errorMessage = <any>error
