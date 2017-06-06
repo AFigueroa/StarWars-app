@@ -2,6 +2,7 @@ import {HomeComponent} from './public/home/home.component';
 import {PeopleComponent} from './public/people/people.component';
 import {PeopleDetailsComponent} from './public/people/details/people.details.component';
 
+// List of Parent routes
 export const appRoutes = [
     {
         // Home Route

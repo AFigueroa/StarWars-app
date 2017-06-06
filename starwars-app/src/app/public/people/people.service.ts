@@ -23,6 +23,14 @@ export class PeopleService {
                     .catch(this.handleError);
     }
     
+    //@getPeopleByPage
+    // Retrieve people list data
+    getPeopleByPage(pageUrl): Observable<People[]> {
+        return this.http.get(pageUrl)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+    }
+    
     //@getPerson
     // Retrieve character data by id
     getPerson(personId): Observable<Person[]> {

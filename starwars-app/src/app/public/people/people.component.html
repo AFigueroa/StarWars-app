@@ -23,4 +23,14 @@
         <div class="table-detail small">{{person.gender}}</div>
         <div class="table-detail small">{{person.films.length}}</div>
     </div>
+    
+    <!--  Pagination Controls  -->
+    <div class="table-row">
+        
+        <button *ngIf="people.previous != null" (click)="getPeopleByPage(people.previous)">Previous</button>
+        
+        <button></button>
+        
+        <button *ngIf="people.next != null" (click)="getPeopleByPage(people.next)">Next</button>
+    </div>
 </div>
